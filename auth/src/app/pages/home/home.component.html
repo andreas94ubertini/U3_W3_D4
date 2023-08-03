@@ -1,0 +1,17 @@
+<mat-grid-list cols="4" rowHeight="80px" >
+  <mat-grid-tile
+    [colspan]="4"
+    [rowspan]="1"
+    >
+    <p class="h1">Benvenuto</p><p class="h1" *ngIf="user">&nbsp;{{user.nome.charAt(0).toUpperCase()}}{{user.nome.slice(1)}}</p>
+  </mat-grid-tile>
+</mat-grid-list>
+<mat-grid-list cols="4" *ngIf="!user" >
+  <mat-grid-tile
+    [colspan]="4"
+    [rowspan]="1"
+  >
+    <a mat-raised-button color="primary" routerLink="/auth/login">Accedi</a>
+    <a mat-stroked-button color="primary" routerLink="/auth/register">Registrati</a>
+  </mat-grid-tile>
+</mat-grid-list>

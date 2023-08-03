@@ -1,0 +1,28 @@
+<div class="container">
+  <form class="example-form">
+    <mat-form-field class="example-full-width">
+      <input type="text" placeholder="Nome" aria-label="Number" name="nome" [(ngModel)]="formData.nome" matInput>
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+      <input type="text" placeholder="Cognome" aria-label="Number" name="cognome" [(ngModel)]="formData.cognome"
+             matInput>
+    </mat-form-field>
+    <div class="pic-cont">
+      <label for="profilePic"> carica la tua immagine
+        <input type="file" accept="image/png, image/gif, image/jpeg" class="form-control mt-2" placeholder="profilePic"
+               id="profilePic" name="profilePic" [(ngModel)]="formData.profilePic">
+      </label>
+    </div>
+    <mat-form-field class="example-full-width">
+      <input type="email" placeholder="Email" aria-label="Number" name="email" [(ngModel)]="formData.email" matInput>
+    </mat-form-field>
+    <mat-form-field>
+      <input type="password" placeholder="Password" aria-label="Number" placeholder="Password" name="password"
+             [(ngModel)]="formData.password" matInput>
+    </mat-form-field>
+    <div class="btn-cont">
+      <button (click)="register()" mat-raised-button color="primary">Registrati</button>
+      <a mat-raised-button color="warn" routerLink="/auth">Indietro</a>
+    </div>
+  </form>
+</div>

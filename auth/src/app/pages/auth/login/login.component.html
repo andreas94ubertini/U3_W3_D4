@@ -1,0 +1,15 @@
+<div class="container">
+<form class="example-form">
+  <mat-form-field class="example-full-width">
+    <input type="email" placeholder="Email" aria-label="Number" name="email" [(ngModel)]="formData.email" matInput >
+  </mat-form-field>
+  <mat-form-field>
+    <input type="password" placeholder="Password" aria-label="Number" placeholder="Password" name="password" [(ngModel)]="formData.password" matInput >
+  </mat-form-field>
+  <div class="btn-cont">
+    <button (click)="login()" mat-raised-button color="primary">Accedi</button>
+    <a mat-raised-button color="warn" routerLink="/auth">Indietro</a>
+  </div>
+</form>
+</div>
+
